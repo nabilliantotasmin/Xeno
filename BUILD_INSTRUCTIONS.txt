@@ -1,0 +1,72 @@
+=======================================================
+           XENO PLUGIN - BUILD INSTRUCTIONS
+=======================================================
+
+1. BUILD PLUGIN
+   ------------
+   Windows:
+     gradlew.bat clean build
+   
+   Linux/Mac:
+     ./gradlew clean build
+   
+   File hasil build: build/libs/Xeno-1.0.0.jar
+
+
+2. UPLOAD KE SERVER
+   -----------------
+   - Upload file: build/libs/Xeno-1.0.0.jar
+   - Ke folder: /plugins/ di server Minecraft
+   - JANGAN ekstrak .jar file
+   - JANGAN upload folder src/
+
+
+3. RESTART SERVER
+   ---------------
+   - Stop server
+   - Start server
+   - Plugin akan membuat folder /plugins/Xeno/ otomatis
+
+
+4. STRUKTUR SETELAH RUNNING
+   -------------------------
+   /plugins/
+     ├── Xeno-1.0.0.jar          <- File plugin
+     └── Xeno/                    <- Folder dibuat otomatis
+         ├── config.yml
+         ├── roles.yml
+         ├── shops.yml
+         ├── warps.yml
+         └── data/
+             └── players/
+
+
+5. CARA CEK PLUGIN BERHASIL
+   -------------------------
+   Di console server akan muncul:
+   [Xeno] Xeno has been enabled!
+   
+   Test command:
+   /balance
+   /shop
+   /warps
+
+
+6. TROUBLESHOOTING
+   ----------------
+   Jika ada error:
+   - Cek server.log atau latest.log
+   - Pastikan Java 8 atau lebih tinggi
+   - Pastikan Spigot/Paper 1.13+
+   - Install Vault plugin untuk economy support
+
+
+7. UPDATE CONFIG
+   --------------
+   Edit file: /plugins/Xeno/config.yml
+   Reload: restart server atau /reload (not recommended)
+
+
+=======================================================
+      JANGAN EKSTRAK FILE .JAR - LANGSUNG UPLOAD!
+=======================================================
