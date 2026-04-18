@@ -1,0 +1,91 @@
+name: Xeno
+version: 1.0.0
+main: com.xenodev.xeno.Xeno
+api-version: 1.13
+softdepend: [Vault]
+author: XenoDev
+
+commands:
+  balance:
+    description: Check your balance
+    aliases: [bal, money]
+  pay:
+    description: Pay another player
+    usage: /pay <player> <amount>
+  eco:
+    description: Economy admin commands
+    usage: /eco <give|take|set> <player> <amount>
+    permission: xeno.admin.eco
+  shop:
+    description: Open the shop GUI
+  role:
+    description: Manage player roles
+    usage: /role <list|set|create|delete>
+    permission: xeno.admin.role
+  tp:
+    description: Teleport to a player
+    usage: /tp <player>
+    permission: xeno.admin.tp
+  tpa:
+    description: Request to teleport to a player
+    usage: /tpa <player>
+  tpaccept:
+    description: Accept a teleport request
+    aliases: [tpyes]
+  tpdeny:
+    description: Deny a teleport request
+    aliases: [tpno]
+  home:
+    description: Teleport to your home
+    usage: /home [name]
+  sethome:
+    description: Set a home location
+    usage: /sethome [name]
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+  homes:
+    description: List your homes
+  warp:
+    description: Teleport to a warp
+    usage: /warp <name>
+  setwarp:
+    description: Create a warp
+    usage: /setwarp <name>
+    permission: xeno.admin.warp
+  delwarp:
+    description: Delete a warp
+    usage: /delwarp <name>
+    permission: xeno.admin.warp
+  warps:
+    description: List all warps
+  msg:
+    description: Send a private message
+    usage: /msg <player> <message>
+    aliases: [tell, whisper, w]
+  reply:
+    description: Reply to the last message
+    usage: /reply <message>
+    aliases: [r]
+
+permissions:
+  xeno.admin:
+    description: Full admin access
+    default: op
+    children:
+      xeno.admin.eco: true
+      xeno.admin.role: true
+      xeno.admin.tp: true
+      xeno.admin.warp: true
+  xeno.admin.eco:
+    description: Economy admin commands
+    default: op
+  xeno.admin.role:
+    description: Role management
+    default: op
+  xeno.admin.tp:
+    description: Direct teleport
+    default: op
+  xeno.admin.warp:
+    description: Warp management
+    default: op

@@ -1,0 +1,50 @@
+economy:
+  starting-balance: 1000.0
+  currency-symbol: "$"
+  currency-name: "Dollar"
+  currency-name-plural: "Dollars"
+
+shop:
+  enabled: true
+  gui-title: "&6&lShop"
+
+roles:
+  default-role: "member"
+
+teleport:
+  request-timeout: 60
+  cooldown: 5
+
+homes:
+  max-homes: 5
+  max-homes-vip: 10
+
+warps:
+  enabled: true
+
+messages:
+  prefix: "&8[&6Xeno&8]&r "
+  no-permission: "&cYou don't have permission to do that!"
+  player-not-found: "&cPlayer not found!"
+  insufficient-funds: "&cYou don't have enough money!"
+  economy-paid: "&aYou paid &e{player} &a{amount}."
+  economy-received: "&aYou received &e{amount} &afrom &e{player}."
+  teleport-request-sent: "&aTeleport request sent to &e{player}&a."
+  teleport-request-received: "&e{player} &awants to teleport to you. &7/tpaccept or /tpdeny"
+  teleport-accepted: "&aTeleport request accepted!"
+  teleport-denied: "&cTeleport request denied."
+  teleport-no-request: "&cYou have no pending teleport requests."
+  home-set: "&aHome &e{name} &aset!"
+  home-deleted: "&aHome &e{name} &adeleted!"
+  home-teleported: "&aTeleported to home &e{name}&a!"
+  home-not-found: "&cHome not found!"
+  home-limit: "&cYou have reached your home limit!"
+  warp-created: "&aWarp &e{name} &acreated!"
+  warp-deleted: "&aWarp &e{name} &adeleted!"
+  warp-teleported: "&aTeleported to warp &e{name}&a!"
+  warp-not-found: "&cWarp not found!"
+  message-sent: "&7[&aYou &7-> &a{player}&7] &f{message}"
+  message-received: "&7[&a{player} &7-> &aYou&7] &f{message}"
+  no-reply-target: "&cYou have no one to reply to!"
+
+debug: false
